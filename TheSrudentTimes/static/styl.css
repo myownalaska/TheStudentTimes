@@ -1,0 +1,278 @@
+{% load static %}
+
+@font-face {
+    font-family: "BebasRegular";
+    src: url('/static/fonts/BebasRegular/BebasRegular.eot');
+    src: url('/static/fonts/BebasRegular/BebasRegular.eot?#iefix')format("embedded-opentype"),
+    url('/static/fonts/BebasRegular/BebasRegular.woff') format("woff"),
+    url('/static/fonts/BebasRegular/BebasRegular.ttf') format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "BebasBook"; */
+@font-face {
+    font-family: "BebasBook";
+    src: url("{% static '/static/fonts/BebasBook/BebasBook.eot' %}");
+    src: url("{% static '/static/fonts/BebasBook/BebasBook.eot?#iefix' %}")format("embedded-opentype"),
+    url("{% static '/static/fonts/BebasBook/BebasBook.woff' %}") format("woff"),
+    url("{% static '/static/fonts/BebasBook/BebasBook.ttf' %}") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "BebasBold"; */
+@font-face {
+    font-family: "BebasBold";
+    src: url("/static/fonts/BebasBold/BebasBold.eot");
+    src: url("/static/fonts/BebasBold/BebasBold.eot?#iefix")format("embedded-opentype"),
+    url("/static/fonts/BebasBold/BebasBold.woff") format("woff"),
+    url("/static/fonts/BebasBold/BebasBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "BebasLight"; */
+@font-face {
+    font-family: "BebasLight";
+    src: url("/static/fonts/BebasLight/BebasLight.eot");
+    src: url("/static/fonts/BebasLight/BebasLight.eot?#iefix")format("embedded-opentype"),
+    url("/static/fonts/BebasLight/BebasLight.woff") format("woff"),
+    url("/static/fonts/BebasLight/BebasLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "BebasThin"; */
+@font-face {
+    font-family: "BebasThin";
+    src: url("/static/fonts/BebasThin/BebasThin.eot");
+    src: url("/static/fonts/BebasThin/BebasThin.eot?#iefix")format("embedded-opentype"),
+    url("/static/fonts/BebasThin/BebasThin.woff") format("woff"),
+    url("/static/fonts/BebasThin/BebasThin.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+body { background: #0f0f0f; }
+
+header {
+   position: relative;
+   height: 800px;
+   min-height: 500px;
+   width 100%;
+   background: #161415 url('img/grani_1.svg') right center;
+   background-size: 160%;
+   text-align: center;
+   overflow: hidden;
+   height: 100%;
+}
+
+header .banner {
+   display: inline-block;
+   vertical-align: middle;
+   margin: 180px auto;
+   width: 85%;
+   padding-bottom: 30px;s
+   text-align: center;
+}
+
+header .banner-text { width: 100%; }
+header .banner-text h2 {
+   font-family: "BebasLight";
+   color: #fff;
+   margin: 0 auto 18px auto;
+   font-size: 75px;
+}
+
+header .banner-text h1 {
+   font-family: "BebasBold";
+   color: #fff;
+   margin: 0 auto 18px auto;
+   font-size: 150px;
+}
+
+.centered {
+  font-family: "BebasBold";
+  text-align: center;
+  color: #F13F63;
+}
+
+.mt {
+  margin-top: 35px;
+}
+
+.mb {
+  margin-bottom: 80px;
+}
+
+.gallery {
+  margin-top: 30px;
+}
+
+.gallery img:hover {
+  opacity: 0.4;
+}
+
+.gallery  h3 {
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+  color: #334865;
+}
+
+#nav-wrap {
+   font-family: "BebasRegular";
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   position: fixed;
+   margin-left: 600px;
+}
+
+ul#nav li {
+   position: relative;
+   list-style: none;
+   height: 48px;
+   display: inline-block;
+}
+
+ul#nav li a {
+   display: inline-block;
+   padding: 8px 13px;
+   line-height: 32px;
+   text-decoration: none;
+   text-align: left;
+   color: #F06000;
+}
+
+ul#nav li.current a { color: #F06000; }
+
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+section.form {
+  /*background: url(../img/dot.svg) right center;*/
+  position: relative;
+}
+
+section.form:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('img/dot.svg') right center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.form h1{
+  font-family: 'Bevan', cursive;
+  font-size: 76px;
+  text-align: left;
+  color:#fee22a;
+}
+.form h2{
+  font-family: 'BebasBold', serif;
+  text-align: left;
+  font-size: 60px;
+  color: #334865;
+}
+.form h3{
+  font-family: 'Crimson Text', serif;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 50px;
+  color: #334865;
+}
+.form h4{
+  font-family: 'Bevan', cursive;
+  text-align: left;
+  font-size: 60px;
+  color: #334865;
+}
+.form h5{
+  font-family: 'BebasBold', serif;
+  text-align: left;
+  font-size: 80px;
+  color: #334865;
+}
+.form p{
+  font-family: 'BebasBold', serif;
+  text-align: left;
+  font-size: 20px;
+  color:#fee22a;
+}
+
+#social {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#social i {
+  font-size: 40px;
+  color:  #334865;
+}
+
+#social i:hover {
+  color: #1abc9c;
+}
+
+#footer {
+  background: #fff;
+  text-align: center;
+  padding: 40px 0;
+  color:#334864;
+  font-family: "BebasBold";
+}
+#footer span{
+    color: #f03f62;
+}
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.social-links li {
+  display: inline-block;
+  margin: 5px;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+  display: block;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid rgb(51, 72, 100);
+  border-radius: 3px;
+  font-size: 14px;
+  color: rgb(51, 72, 100);
+}
+
+.social-links a:hover {
+  border: 1px solid rgba(51, 72, 100, .5);
+  color: rgba(51, 72, 100, .8);
+}
+
+.form-group label{
+  font-family: "BebasLight";
+  font-size: 16px;
+  color: #fff;
+  border-radius: 0px !important;
+}
+
+.br0 {
+    border-radius: 0px !important;
+    font-family: "BebasBold";
+}

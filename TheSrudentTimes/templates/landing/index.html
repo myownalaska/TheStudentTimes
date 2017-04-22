@@ -1,0 +1,184 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+     <link rel="stylesheet" href="{% static 'styl.css' %}">
+      <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+     <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">sign in</a></li>
+            <li><a class="smoothscroll" href="#about">sign up</a></li>
+         </ul> 
+
+      </nav> 
+
+      <div class="row banner">
+         <div class="banner-text">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <h2>The student</h2>
+              <h1>Times</h1>
+            </div>
+         </div>
+
+     <div class="col-sm-6 col-md-6  col-lg-6">
+      <div class="container">
+           <form action="" method="post" class="form-horizontal">{% csrf_token %}
+              <div id="div_id_name" class="form-group">
+                  <label for="id_name" class="col-sm-2 control-label requiredField">Name<span class="asteriskField">*</span> </label>
+                    <div class="col-sm-offset-0 col-sm-3 controls ">
+                        <input type="text" name="name" placeholder="Name" class="form-control textinput textInput form-control" maxlength="128" required id="id_name" />
+                    </div>
+              </div>
+              <div id="div_id_email" class="form-group">
+                  <label for="id_email" class="col-sm-2 control-label requiredField">Email<span class="asteriskField">*</span> </label>
+                    <div class="col-sm-offset-0 col-sm-3 controls ">
+                        <input type="email" name="email"  placeholder="Email" class="form-control emailinput form-control" maxlength="254" required id="id_email" />
+                    </div>
+              </div>
+              <div id="div_id_subject" class="form-group">
+                  <label for="id_subject" class="col-sm-2 control-label requiredField">Subject<span class="asteriskField">*</span> </label>
+                  <div class="col-sm-offset-0 col-sm-3 controls ">
+                      <input type="text" name="subject"  placeholder="Subject" class="form-control textinput textInput form-control" maxlength="128" required id="id_subject" />
+                  </div>
+              </div>
+              <div id="div_id_text" class="form-group">
+                  <label for="id_text" class="col-sm-2 control-label requiredField">Message<span class="asteriskField">*</span> </label>
+                  <div class="col-sm-offset-0 col-sm-3 controls ">
+                      <textarea name="text" cols="40" rows="10" placeholder="Message" class="form-control textarea form-control" required id="id_text"></textarea>
+                  </div>
+              </div>
+                <div class="form-group">
+                 <div class="col-sm-offset-2 col-sm-3">
+                    <button type="submit" class="btn btn-default br0">Send</button>
+                 </div>
+             </div>
+          </form>
+      <!--<form class="form-horizontal" method="post" action="">{% csrf_token %}-->
+      <!--<div class="form-group">-->
+    <!--<label for="inputName3" class="col-sm-2 control-label ">Name</label>-->
+    <!--<div class="col-sm-offset-0 col-sm-3">-->
+      <!--<input name=" {{ form.name.name}}" type="name" class="form-control " id="inputName3" placeholder="Name">-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div class="form-group">-->
+    <!--<label for="inputemail3" class="col-sm-2 control-label">Email</label>-->
+    <!--<div class="col-sm-offset-0 col-sm-3">-->
+      <!--<input name="{{ form.email.name }}" type="email" class="form-control" id="inputEmail" placeholder="Email">-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div class="form-group">-->
+      <!--<label for="inputSubject3" class="col-sm-2 control-label">Subject</label>-->
+    <!--<div class="col-sm-offset-0 col-sm-3">-->
+      <!--<input name=" {{ form.subject.name }}" type="subject" class="form-control" id="inputSubject3" placeholder="Subject">-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <!--<div class="form-group">-->
+      <!--<label for="inputPassword3" class="col-sm-2 control-label">Message</label>-->
+    <!--<div class="col-sm-offset-0 col-sm-3">-->
+    <!--<textarea name="{{ form.text.name }}" class="form-control" rows="7">-->
+      <!--</textarea> -->
+    <!--</div>-->
+  <!--</div>-->
+        <!---->
+  <!--<div class="form-group">-->
+    <!--<div class="col-sm-offset-2 col-sm-3">-->
+      <!--<button type="submit" class="btn btn-default br0">Send</button>-->
+    <!--</div>-->
+  <!--</div>-->
+     <!--</form>-->
+    </div>
+    </div>
+   </header>
+
+   <div class="container">
+    <div class="row centered mt mb">
+      <h1>Our last News</h1>
+
+   <hr>
+      
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <a href="#first"><img src="{% static 'img/portfolio/folio01.jpg' %}" class="img-responsive"></a>
+        <h3>В гостях у Сбертеха: всё для работы, всё для роста. Мы чуть не остались жить.</h3>
+          <a href="https://habrahabr.ru/article/324486/" class="link1">Read more...</a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <a href="work.html"><img src="{% static 'img/portfolio/folio02.jpg' %}" class="img-responsive"></a>
+        <h3>Видео | Зачем нужен квантовый компьютер?</h3>
+          <a href="http://naukatehnika.com/video-pochemu-myi-boimsya-i-samyij-uprugij-metamaterial.html" class="link1">See more...</a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <a href="work.html"><img src="{% static 'img/portfolio/folio03.jpg' %}" class="img-responsive"></a>
+        <h3>С 18 по 20 апреля состоится 21-я Университетская выставка научных достижений в рамках Недели науки Герценовского университета.</h3>
+          <a href="https://www.herzen.spb.ru/announce/18-4-2017/" class="link1">Read more...</a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <a href="work.html"><img src="{% static 'img/portfolio/folio04.jpg' %}" class="img-responsive"></a>
+        <h3>Роботизация производства и рынок труда</h3>
+           <a href="http://naukatehnika.com/robotizacziya-proizvodstva-i-vnedrenie-novyix-texnologij.html" class="link1">Read more...</a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <a href="work.html"><img src="{% static 'img/portfolio/folio05.jpg' %}" class="img-responsive"></a>
+        <h3>Настольные игры ЦРУ</h3>
+           <a href="https://habrahabr.ru/company/parallels/blog/326666/" class="link1">Read more...</a>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+        <a href="work.html"><img src="{% static 'img/portfolio/folio06.jpg' %}" class="img-responsive"></a>
+        <h3>Пользователь «Лепрозория» нарисовал дизайн YouTube для вертикальных видео. И придумал очень полезную функцию.</h3>
+          <a href="https://meduza.io/shapito/2017/04/17/polzovatel-leprozoriya-narisoval-dizayn-youtube-dlya-vertikalnyh-video-i-pridumal-ochen-poleznuyu-funktsiyu" class="link1">Read more...</a>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="form">
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12 col-lg-12">
+      <h1>Dear students!</h1>
+        <h2>On our website,</h2>
+          <h3> we publish the news,</h3>
+             <h4> which are used for</h4> 
+          <h5>educational purposes.*</h5>
+       <p>*You can offer your personal articles or articles from various information resources.</p>
+     </div>
+    </div>
+   </div>
+ </section>
+
+ <footer id="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-12">
+
+          <ul class="social-links">
+            <li><a href="" ><i class="fa fa-facebook"></i></a></li>
+            <li><a href="" ><i class="fa fa-vk"></i></a></li>
+            <li><a href="" ><i class="fa fa-instagram"></i></a></li>
+          </ul>
+
+          <p class="heart">
+                        Made with <span class="fa fa-heart fa-2x animated pulse"></span> in HSPU
+                    </p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
